@@ -11,67 +11,38 @@
 
 
 
-// ===== FORM CTA con fetch + redirect =====
-const ctaForm = document.getElementById("cta");
+  // Script form CTA con validazione email + redirect personalizzato
+const form = document.querySelector(".cta-form");
+const emailField = document.getElementById("email");
 
-if (ctaForm) {
-  const ctaNome = document.getElementById("cta-nome");
-  const ctaEmail = document.getElementById("cta-email");
-  const ctaCorso = document.getElementById("cta-corso");
-  const ctaPrivacy = document.getElementById("cta-privacy");
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+form.addEventListener("submit", function (e) {
+  // Controllo email
+  if (!emailRegex.test(emailField.value)) {
+    e.preventDefault(); // blocca solo se non valida
+    alert("Inserisci un indirizzo email valido.");
+    emailField.focus();
+    return;
+  }
 
-  ctaForm.addEventListener("submit", async function (e) {
-    e.preventDefault();
+  // ✅ Se valida → invia a Formspree (grazie all'action)
+  // e forza il redirect alla tua pagina "grazie"
+  e.preventDefault(); // blocca il redirect di Formspree
+  const data = new FormData(form);
 
-    // Validazione nome
-    if (ctaNome.value.trim() === "") {
-      alert("Inserisci il tuo nome completo.");
-      ctaNome.focus();
-      return;
-    }
-
-    // Validazione email
-    if (!emailRegex.test(ctaEmail.value)) {
-      alert("Inserisci un indirizzo email valido.");
-      ctaEmail.focus();
-      return;
-    }
-
-    // Validazione corso
-    if (ctaCorso.value.trim() === "") {
-      alert("Seleziona un corso.");
-      ctaCorso.focus();
-      return;
-    }
-
-    // Validazione privacy
-    if (!ctaPrivacy.checked) {
-      alert("Devi acconsentire al trattamento dei dati personali.");
-      return;
-    }
-
-    // Invio a Formspree
-    const data = new FormData(ctaForm);
-
-    try {
-      const response = await fetch("https://formspree.io/f/mqaykqkv", {
-        method: "POST",
-        body: data,
-        headers: { "Accept": "application/json" }
-      });
-
-      if (response.ok) {
-        window.location.href = "https://itsbeyourcampus.it/grazie/";
-      } else {
-        alert("Errore nell'invio del form, riprova.");
-      }
-    } catch (error) {
-      alert("Errore di connessione, riprova.");
-    }
+  fetch("https://formspree.io/f/mqaykqkv", {
+    method: "POST",
+    body: data,
+    headers: { "Accept": "application/json" }
+  }).then(() => {
+    window.location.href = "https://itsbeyourcampus.it/grazie/";
+  }).catch(() => {
+    alert("Errore nell'invio del form, riprova.");
   });
-}
+});
+
+    
 
 
   
