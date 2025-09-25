@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ITS BeYourCampus</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  
+  
+</head>
+
+<body>
+
+  <!-- N A V B A R  S T I C K Y -->
+  <nav class="navbar">
+    <div class="navbar-container">
+
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <div class="logo">
+        <a href="#hero">
+          <img src="img/BYC_Logo_RGB.png" alt="Logo BE YOUR CAMPUS" />
+        </a>
+      </div>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#chi-siamo">Chi siamo</a></li>
+        <li><a href="#corsi">Corsi</a></li>
+        <li><a href="#campus">Il Campus</a></li>
+        
+        <li class="dropdown">
+          <a href="#sceglierci">Perché sceglierci <span class="freccia">&#9662;</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#competenze">Competenze</a></li>
+            <li><a href="#why">Perché Be Your Campus</a></li>
+            <li><a href="#sbocchi">Sbocchi professionali</a></li>
+          </ul>
+        </li>
+        <li><a href="#contatti">Contatti</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+
+  <!-- H E R O -->
+  <section class="hero-split-animated" id="hero">
+    <div class="plexus-layer" id="plexus-verde" aria-hidden="true"></div>
+    <div class="plexus-layer" id="plexus-arancione" aria-hidden="true"></div>
+
+
+    <div class="hero-text">
+      <!-- <h1>ITS ACADEMY</h1> -->
+      <img src="img/BYC_Logo_Completo_RGB.png" alt="Logo ITS Build & Constructions" class="logo-hero">
+      <p>Il tuo futuro? Lo costruisci tu. Mattone dopo mattone</p>
+      <a href="#cta" class="btn-scopri">Iscriviti</a>
+    </div>
+  </section>
+
+
+  <!-- O P E N  D A Y -->
+<section class="open-day-magic" id="openday">
+  <div class="open-day-wrapper">
+    <div class="open-day-content">
+      <h2>Open Day – <span class="highlight">30 Settembre 2025</span></h2>
+      <p>Scopri i corsi, incontra i docenti e vivi l’esperienza <strong>Be Your Campus</strong> dal vivo. <br>
+        Una giornata per esplorare, chiedere, sognare. <br><br>
+        📍 <strong>Ore 17:30 – presso la sede di Ance Como</strong><br>Via Briantea, 6, 22100 Como CO
+      </p>
+
+      <a href="iscrizione.html" class="btn-magic" target="_blank">Iscriviti ora</a>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- C H I  S I A M O -->
+
+  <section class="chi-siamo-tre-colonne" id="chi-siamo">
+    <div class="colonna titolo">
+      <h2>Chi siamo</h2>
+    </div>
+
+    <div class="colonna testo">
+      <p>
+        Be Your Campus è l’ITS Academy nato per formare i protagonisti del futuro nel mondo dell’edilizia sostenibile.
+        <br><br>Un luogo dinamico e collaborativo dove i giovani possono mettere a fuoco chi vogliono diventare
+        acquisendo competenze tecniche reali e spendibili da subito
+      </p>
+    </div>
+
+    <div class="colonna testo">
+      <p>
+        Frutto della sinergia tra mondo educational, istituzioni e imprese del settore, Be Your Campus è molto di più di
+        un percorso formativo: è uno spazio di crescita personale e professionale, pensato per accompagnare i talenti di
+        oggi verso le sfide di domani, in un contesto dove la sostenibilità non è solo un tema, ma una direzione
+        concreta
+      </p>
+    </div>
+  </section>
+
+   <!-- C O R S I  -->
+   <section class="corso-unico" id="corsi">
+    <div class="corso-wrapper">
+      <div class="corso-text">
+        <h2>Corso <br>Digital Construction Manager</h2>
+        <p>Un percorso biennale per diventare <br>protagonista dell’innovazione nel settore delle costruzioni.</p>
+        <ul class="corso-punti">
+          <li><i class="fas fa-certificate"></i> Qualifica riconosciuta a livello nazionale</li>
+          <li><i class="fas fa-briefcase"></i> Stage formativi in azienda</li>
+          <li><i class="fas fa-users"></i> Mentor e docenti dal mondo del lavoro</li>
+        </ul>
+        <a href="#cta" class="btn-magic">Iscriviti ora</a>
+      </div>
+      <div class="corso-img">
+        <img src="img/smiling-engineer-in-protective-goggles-holding-blu-2024-11-15-17-56-36-utc.jpg"
+          alt="Studenti ITS in aula">
+      </div>
+    </div>
+  </section>
+
+  <!-- C A M P U S -->
+<section class="presentazione-campus" id="scuola">
+  <div class="campus-wrapper">
+    <!-- Testo a sinistra -->
+    <div class="campus-text">
+      <h2>Il Campus</h2>
+      <p>
+        L’ITS Academy “Be Your Campus” sorgerà a Merone, <br>nella sede definitiva che sarà pronta entro un anno. 
+        <br>Nel frattempo, le attività partiranno già da questo autunno <br>in un’altra sede provvisoria.
+      </p>
+      <p>
+        Il progetto è nato dalla collaborazione con <strong>Holcim Italia</strong> <br>e <strong>Ance Como</strong> 
+        per creare un polo formativo dedicato al settore delle costruzioni. L'obiettivo è affrontare le sfide 
+        dell’Industria 4.0, promuovendo innovazione, sostenibilità e sicurezza.
+      </p>
+      <p>
+        Un vero e proprio campus dove giovani, docenti e imprese collaborano per costruire il futuro professionale, 
+        <br>rafforzando il legame tra istruzione e mondo del lavoro.
+      </p>
+    </div>
+
+    <!-- Foto principale a destra -->
+    <div class="campus-img">
+      <img src="img/2025_07_18_Vista_esterna_1_Fotoinserimento.jpg" alt="Rendering nuova sede ITS">
+    </div>
+  </div>
+
+  <!-- Carosello immagini -->
+ <!-- Carosello immagini scuola -->
+<div class="campus-carousel">
+  <div class="carousel-track">
+    <img src="img/2025_07_18_Vista_esterna_2.jpg" alt="Rendering esterno 1">
+    <img src="img/2025_07_18_Vista_esterna_3_Fotoinserimento.jpg" alt="2">
+    <img src="img/2025_07_18_Vista_interna_1_versione_1.jpg" alt="3">
+    <img src="img/2025_07_18_Vista_interna_2_versione_1.jpg" alt="5">
+  
+  </div>
+</div>
+
+</section>
+
+  <!-- C O M P E T E N Z E -->
+  <section class="competenze" id="competenze">
+    <h2 class="section-title">Competenze Acquisite</h2>
+    <p class="intro-text">
+      Durante il percorso svilupperai abilità tecniche<br> richieste nel mondo dell’edilizia smart e sostenibile:
+    </p>
+  
+    <div class="griglia-competenze">
+      <div class="comp-item">
+        <i class="fas fa-network-wired icona-comp"></i>
+        <p><strong>Gestione digitale</strong><br>integrata dei processi edilizi.</p>
+      </div>
+  
+      <div class="comp-item">
+        <i class="fas fa-drafting-compass icona-comp"></i>
+        <p>Modellazione<br>e <strong>progettazione BIM</strong> avanzata.</p>
+      </div>
+  
+      <div class="comp-item">
+        <i class="fas fa-leaf icona-comp"></i>
+        <p>Progettazione <strong>sostenibile</strong><br>e a basso impatto ambientale.</p>
+      </div>
+  
+      <div class="comp-item">
+        <i class="fas fa-solar-panel icona-comp"></i>
+        <p><strong>Efficienza energetica</strong><br>e uso di fonti rinnovabili.</p>
+      </div>
+  
+      <div class="comp-item">
+        <i class="fas fa-lightbulb icona-comp"></i>
+        <p>Integrazione tra progettazione,<br>costruzione e <strong>innovazione</strong>.</p>
+      </div>
+  
+      <div class="comp-item">
+        <i class="fas fa-diagram-project icona-comp"></i>
+        <p><strong>Gestione dei tempi</strong>, costi e risorse <br>nei progetti edilizi complessi.</p>
+      </div>
+    </div>
+  </section>
+  
+
+
+
+  <!-- S T A T I S T I C H E -->
+  <section class="statistiche-approfondite">
+    <div class="stat-colonne">
+      <!-- Colonna 1 -->
+      <div class="stat-colonna">
+        <div class="stat-box">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <h3><span class="count" data-val="2000">0</span></h3>
+          <p>ore di formazione</p>
+        </div>
+        <div class="approfondimento-box">
+          <h3>Non solo formazione.<br><span>È un’esperienza di vita</span></h3>
+          <p>L’obiettivo è formare persone, non solo professionisti. Be Your Campus consente di entrare in una
+            comunità giovane, dove studio, lavoro e vita si intrecciano.</p>
+        </div>
+      </div>
+
+      <!-- Colonna 2 -->
+      <div class="stat-colonna">
+        <div class="stat-box">
+          <i class="fa-solid fa-briefcase"></i>
+          <h3><span class="count" data-val="900">0</span></h3>
+          <p>ore di stage in azienda</p>
+        </div>
+        <div class="approfondimento-box">
+          <h3>Enti e aziende partner,<br><span>alleati della tua formazione</span></h3>
+          <p>La pratica si svolge in imprese selezionate che collaborano con l’ITS Be Your Campus, offrendo
+            supporto, formazione sul campo e opportunità reali di lavoro.</p>
+        </div>
+      </div>
+
+      <!-- Colonna 3 -->
+      <div class="stat-colonna">
+        <div class="stat-box">
+          <i class="fa-solid fa-chalkboard-user"></i>
+          <h3 class="number-wrap"><span class="count" data-val="60">0</span><span class="percent-symbol">%</span></h3>
+          <p>docenti provenienti dalle aziende</p>
+        </div>
+        <div class="approfondimento-box">
+          <h3>Docenti orientati<br><span>al mondo del lavoro</span></h3>
+          <p>Le lezioni e i laboratori sono svolti con professionisti ed esperti che conoscono le reali
+            esigenze del mercato e portano in aula l’esperienza viva del cantiere.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- P E R C H É  B E  Y O U R  C A M P U S -->
+  <section class="why-manifesto" id="why">
+    <h2 class="manifesto-title">Perché “Be Your Campus”?</h2>
+
+    <div class="manifesto-grid">
+      <div class="manifesto-item">
+        <span class="icon"><i class="fas fa-university"></i></span>
+        <p>Formazione esperienziale <br>e sul campo</p>
+      </div>
+      <div class="manifesto-item">
+        <span class="icon"><i class="fas fa-briefcase"></i></span>
+        <p>Stage garantiti<br> durante il percorso</p>
+      </div>
+      <div class="manifesto-item">
+        <span class="icon"><i class="fas fa-chalkboard-teacher"></i></span>
+        <p>Docenti provenienti<br> dal settore</p>
+      </div>
+      <div class="manifesto-item">
+        <span class="icon"><i class="fas fa-users"></i></span>
+        <p>Ambiente collaborativo<br> e stimolante</p>
+      </div>
+      <div class="manifesto-item">
+        <span class="icon"><i class="fas fa-globe-europe"></i></span>
+        <p>Opportunità<br> anche all’estero</p>
+      </div>
+      <div class="manifesto-item">
+        <span class="icon"><i class="fas fa-rocket"></i></span>
+        <p>Competenze richieste<br> dal mercato del lavoro</p>
+      </div>
+    </div>
+  </section>
+
+
+ 
+  <!-- V A L O R I  -->
+  <section class="valori-logo" id="valori">
+    <!-- <h2 class="titolo-blu">I nostri valori</h2> -->
+
+    <div class="valori-container">
+      <div class="valore-card arancione">
+        <h3>Esperienza</h3>
+        <p>Formazione pratica <br>concreta e vicina<br> al mondo del lavoro.</p>
+      </div>
+
+      <div class="valore-card blu">
+        <h3>Crescita</h3>
+        <p>Un percorso personale<br> e professionale<br> su misura per te.</p>
+      </div>
+
+      <div class="valore-card verde">
+        <h3>Futuro</h3>
+        <p>Ti prepariamo alle sfide <br>di domani <br>con competenze attuali.</p>
+      </div>
+    </div>
+  </section>
+
+
+ <!-- S B O C C H I  -->
+ <section class="sbocchi-professionali" id="sbocchi">
+  <div class="container">
+    <h2 class="section-title">Sbocchi Professionali</h2>
+    <p class="intro-text">Alla fine del percorso ITS potrai accedere a ruoli altamente richiesti nel settore delle
+      costruzioni digitali e sostenibili:</p>
+    <div class="professioni-list">
+      <div class="prof-card">
+        <i class="fas fa-network-wired"></i>
+        <h3>Digital Construction Manager</h3>
+        <p>Gestisce e integra strumenti digitali nei processi di costruzione per migliorare efficienza e qualità.</p>
+      </div>
+      <div class="prof-card">
+        <i class="fas fa-cubes"></i>
+        <h3>BIM Construction Manager</h3>
+        <p>Coordina la progettazione e costruzione tramite modelli BIM (Building Information Modeling).</p>
+      </div>
+      <div class="prof-card">
+        <i class="fas fa-bolt"></i>
+        <h3>Energy Construction Manager</h3>
+        <p>Supervisiona soluzioni costruttive per il risparmio energetico e la gestione efficiente delle risorse.</p>
+      </div>
+      <div class="prof-card">
+        <i class="fas fa-leaf"></i>
+        <h3>Sustainability Construction Manager</h3>
+        <p>Promuove pratiche sostenibili nell’edilizia, dal cantiere ai materiali fino alla gestione ambientale.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- P A R T N E R -->
+  <section class="partner">
+    <div class="container">
+      <h2 class="section-title">Aziende e Associazioni Partner</h2>
+      <p class="partner-subtitle">Collaboriamo con realtà del settore per offrire formazione concreta e inserimento
+        professionale.</p>
+
+      <div class="partner-logos">
+        <div class="partner-logo">
+          <img src="img/logo.png" alt="Partner 1">
+        </div>
+        <div class="partner-logo">
+          <img src="img/ance-como-logo.png" alt="Partner 2">
+        </div>
+        <div class="partner-logo">
+          <img src="img/Holcim_Logo_2021_sRGB.png" alt="Partner 3">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- C O N T A T T I -->
+  <div class="contatti">
+    <div class="contatti-col">
+      <h3>Contatti</h3>
+      <p><strong>Telefono:</strong> +39 338 587 3178</p>
+      <p><strong>Email:</strong> <a href="mailto:info@itsbeyourcampus.it">info@itsbeyourcampus.it</a></p>
+      <br>
+      <h3>Sede</h3>
+      <p>BeYourCampus<br>Via Volta, 1<br>22046 Merone (CO) </p>
+      <!-- <p><strong>Sito web:</strong><br><a href="https://www.itsbeyourcampus.it" target="_blank">www.itsbeyourcampus.it</a></p> -->
+      <br>
+      <h3>Seguici</h3>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  
+  <!-- F O R M  C T A -->
+  <form class="cta-form" id="cta" action="https://formspree.io/f/mqaykqkv" method="POST">
+    <!-- Redirect automatico alla tua pagina -->
+    <input type="hidden" name="_next" value="https://itsbeyourcampus.it/grazie.html">
+  
+    <input type="text" name="nome" placeholder="Il tuo nome completo" required />
+    <input type="email" name="email" id="email" placeholder="La tua email" required />
+  
+    <select name="corso" required>
+      <option value="">Seleziona il corso di tuo interesse</option>
+      <option value="Digital Construction Manager">Corso Digital Construction Manager</option>
+    </select>
+  
+    <textarea name="messaggio" placeholder="Scrivi un messaggio o chiedi informazioni..." rows="4"></textarea>
+  
+    <label class="checkbox">
+      <input type="checkbox" name="privacy" required>
+      Acconsento al trattamento dei dati personali
+    </label>
+  
+    <label class="checkbox">
+      <input type="checkbox" name="newsletter">
+      Desidero ricevere aggiornamenti via email
+    </label>
+  
+    <button type="submit" class="btn">Invia richiesta</button>
+  </form>
+  </div>
+  
+    
+<!-- F O O T E R -->
+<footer class="footer">
+    <div class="footer-bottom">
+      <p>© 2025 Be Your Campus. Tutti i diritti riservati. | 
+        <a href="privacy.html">Privacy Policy</a>
+      </p>
+    </div>
+  </footer>
+  
+
+    <!-- P O P  U P  OPEN DAY -->
+<div id="popup-openday" class="popup-overlay">
+  <div class="popup-box">
+    <button class="popup-close" aria-label="Chiudi">&times;</button>
+    <h2>Open Day!</h2>
+    <h3>30 Settembre 2025</h3>
+    <p>Partecipa all'Open Day <br>e scopri il nostro campus.</p>
+    <a href="iscrizione.html" class="btn" target="_blank">Iscriviti</a>
+  </div>
+</div>
+
+
+   
+
+<script src="js/script.js"></script>
+
+
+  
+  
+  
+</body>
+
+</html>

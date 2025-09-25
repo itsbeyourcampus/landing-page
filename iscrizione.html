@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iscrizione Open Day</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/iscrizione.css">
+</head>
+
+<body>
+
+  <section class="iscrizione-section">
+    <div class="form-container">
+      <h2>Iscriviti all'Open Day</h2>
+      <p>Compila il modulo per riservare il tuo posto all’evento.</p>
+
+      <form class="iscrizione-form" action="https://formspree.io/f/xeorqakk" method="POST">
+        <input type="hidden" name="_next" value="https://itsbeyourcampus.it/grazie.html">
+
+        <input type="text" name="nome" placeholder="Il tuo nome completo" required>
+        <input type="email" name="email" id="email" placeholder="La tua email" required>
+        <input type="tel" name="telefono" id="telefono" placeholder="Il tuo numero di telefono" required>
+
+        <input type="date" name="data_nascita" id="data_nascita" required>
+
+        <label class="checkbox">
+          <input type="checkbox" name="privacy" required>
+          Acconsento al trattamento dei dati personali
+        </label>
+
+        <label class="checkbox">
+          <input type="checkbox" name="newsletter">
+          Desidero ricevere aggiornamenti via email
+        </label>
+
+        <button type="submit" class="btn">Invia iscrizione</button>
+      </form>
+
+    </div>
+  </section>
+
+  <script>
+    const form = document.querySelector(".iscrizione-form");
+    const emailField = document.getElementById("email");
+    const telField = document.getElementById("telefono");
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    const telRegex = /^[0-9+\s]{10,15}$/;
+    // numeri, + e spazi, minimo 10 caratteri, massimo 15
+
+    form.addEventListener("submit", function (e) {
+      // Verifica email
+      if (!emailRegex.test(emailField.value)) {
+        e.preventDefault();
+        alert("Inserisci un indirizzo email valido.");
+        emailField.focus();
+        return;
+      }
+
+      // Verifica telefono
+      if (!telRegex.test(telField.value)) {
+        e.preventDefault();
+        alert("Inserisci un numero di telefono valido (almeno 10 cifre).");
+        telField.focus();
+        return;
+      }
+    });
+  </script>
+
+<script>
+
+const dateField = document.getElementById("data_nascita");
+
+form.addEventListener("submit", function (e) {
+  // Verifica email
+  if (!emailRegex.test(emailField.value)) {
+    e.preventDefault();
+    alert("Inserisci un indirizzo email valido.");
+    emailField.focus();
+    return;
+  }
+
+  // Verifica telefono
+  if (!telRegex.test(telField.value)) {
+    e.preventDefault();
+    alert("Inserisci un numero di telefono valido (almeno 10 cifre).");
+    telField.focus();
+    return;
+  }
+
+  // Verifica data (non futura)
+  const today = new Date().toISOString().split("T")[0];
+  if (!dateField.value || dateField.value > today) {
+    e.preventDefault();
+    alert("Inserisci una data di nascita valida.");
+    dateField.focus();
+    return;
+  }
+});
+
+</script>
+</body>
+
+</html>
