@@ -2111,17 +2111,13 @@ body {
     }
   }
 
-/* Logo nascosto da mobile */
-.logo {
-  display: block; /* di default lo mostro */
-}
-
-@media (max-width: 768px) {
-  .logo img {
-    display: none !important; /* nasconde il logo sotto i 768px */
+  @media (max-width: 768px) {
+    .logo img {
+      display: none !important;
+    }
   }
-}
-
+  
+  
   
 
   /* Offset per compensare la navbar sticky */
