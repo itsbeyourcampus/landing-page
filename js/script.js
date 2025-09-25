@@ -15,10 +15,10 @@
 const ctaForm = document.getElementById("cta");
 
 if (ctaForm) {
-  const ctaNome = document.getElementById("nome");
-  const ctaEmail = document.getElementById("email");
-  const ctaCorso = document.getElementById("corso");
-  const ctaPrivacy = document.getElementById("privacy");
+  const ctaNome = document.getElementById("cta-nome");
+  const ctaEmail = document.getElementById("cta-email");
+  const ctaCorso = document.getElementById("cta-corso");
+  const ctaPrivacy = document.getElementById("cta-privacy");
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
@@ -72,6 +72,9 @@ if (ctaForm) {
     }
   });
 }
+
+
+  
 
 
 
