@@ -40,6 +40,16 @@
 
     </div>
   </section>
+<script>
+  const form = document.querySelector(".iscrizione-form");
+
+  form.addEventListener("submit", function() {
+    // Aspetta 1 secondo per dare tempo a Formspree
+    setTimeout(() => {
+      window.location.href = "https://itsbeyourcampus.it/grazie/";
+    }, 1000);
+  });
+</script>
 
   <script>
     const form = document.querySelector(".iscrizione-form");
