@@ -2117,8 +2117,8 @@ body {
 }
 
 @media (max-width: 768px) {
-  .logo {
-    display: none; /* nasconde il logo sotto i 768px */
+  .logo img {
+    display: none !important; /* nasconde il logo sotto i 768px */
   }
 }
 
