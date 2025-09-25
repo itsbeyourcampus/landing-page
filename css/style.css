@@ -2110,7 +2110,18 @@ body {
       background: rgba(255, 255, 255, 0.08);
     }
   }
-  
+
+/* Logo nascosto da mobile */
+.logo {
+  display: block; /* di default lo mostro */
+}
+
+@media (max-width: 768px) {
+  .logo {
+    display: none; /* nasconde il logo sotto i 768px */
+  }
+}
+
   
 
   /* Offset per compensare la navbar sticky */
