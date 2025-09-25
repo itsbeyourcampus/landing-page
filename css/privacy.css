@@ -1,0 +1,551 @@
+/* ========== PRIVACY PAGE ========== */
+
+/* Hero semplice con sfondo blu */
+.privacy-hero {
+    background-color: #295085;
+    color: #fff;
+    text-align: center;
+    padding: 70px 20px;
+  }
+  
+  .privacy-hero h1 {
+    font-size: clamp(28px, 6vw, 50px);
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .privacy-hero p {
+    font-size: 18px;
+    opacity: 0.9;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Contenuto principale */
+  .privacy-content {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+  }
+  
+  /* Titoli principali */
+  .privacy-content h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #295085;
+    margin-top: 50px;
+    margin-bottom: 15px;
+  }
+  
+  /* Sottotitoli (numerati) */
+  .privacy-content h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #444;
+    margin-top: 40px;
+    margin-bottom: 15px;
+  }
+  
+  /* Testo normale */
+  .privacy-content p {
+    margin-bottom: 18px;
+  }
+  
+  /* Liste */
+  .privacy-content ul,
+  .privacy-content ol {
+    margin: 20px 0 20px 30px;
+    padding-left: 20px;
+  }
+  
+  .privacy-content li {
+    margin-bottom: 12px;
+    line-height: 1.6;
+  }
+  
+  /* Link */
+  .privacy-content a {
+    color: #295085;
+    text-decoration: underline;
+  }
+  
+  .privacy-content a:hover {
+    color: #1d3a5c;
+  }
+  
+  /* Footer coerente */
+  .site-footer {
+    background-color: #f7f7f7;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .site-footer a {
+    color: #295085;
+    margin-left: 10px;
+    text-decoration: none;
+  }
+  
+  .site-footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .privacy-hero {
+      padding: 50px 15px;
+    }
+    .privacy-content {
+      font-size: 15px;
+      padding: 0 15px;
+    }
+    .privacy-content h2 {
+      font-size: 20px;
+    }
+    .privacy-content h4 {
+      font-size: 18px;
+    }
+  }
+
+  
+/* Default desktop */
+.privacy-content {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0;   /* nessun margine laterale su desktop */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+  }
+  
+  /* Responsive: mobile e tablet */
+  @media (max-width: 1024px) {
+    .privacy-content {
+      padding: 0 20px;  /* margini laterali solo in responsive */
+    }
+  }
+  
+
+  /* Reset base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: black;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .footer {
+    margin-top: auto;
+  }
+  
+  /* N  A  V  B  A  R   S t i c k y */
+  /*================== NAV BAR=============*/
+
+
+  /* Stili Generici e Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* ============================ STILE DESKTOP E NAVBAR BASE ============================ */
+  .navbar {
+    position: sticky;
+    top: 0;
+    background-color: transparent; /* In cima: trasparente */
+    padding: 20px 40px;
+    box-shadow: none;
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+  
+  /* Stato con effetto vetro quando scrolli */
+  .navbar.scrolled {
+    background: rgba(255, 255, 255, 0.6); /* bianco semi-trasparente */
+    backdrop-filter: blur(10px);          /* sfocatura tipo vetro */
+    -webkit-backdrop-filter: blur(10px);  /* supporto Safari */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* ombra leggera */
+  }
+  
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .logo img {
+    height: 60px;
+    vertical-align: middle;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #ff6f3c;
+  }
+  
+/* Stile base link (navbar trasparente in cima) */
+.nav-links li a {
+    text-decoration: none;
+    color: #000; /* nero */
+    font-weight: 700;
+    font-size: 20px;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+  }
+  
+  /* Quando la navbar ha la classe scrolled */
+  .navbar.scrolled .nav-links li a {
+    color: #295085; /* blu ITS */
+  }
+  
+  .navbar.scrolled .nav-links li a:hover {
+    color: #ff6f3c; /* accento arancione */
+  }
+  
+
+
+  .hamburger {
+    display: none;
+  }
+  
+  /* ============================ DROPDOWN (Perché Sceglierci) ============================ */
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    min-width: 250px;
+    list-style: none;
+    padding: 10px 0;
+    margin-top: 10px;
+  
+    /* nascosto di default */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 1010;
+  }
+  
+  /* 🔴 Cambiato: visibile solo con classe .open (che darai con JS al click) */
+  .dropdown.open .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .dropdown-menu li a {
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 20px;
+    display: block;
+  }
+  
+  .dropdown-menu li a:hover {
+    background-color: #f0f0f0;
+    color: #ff6f3c;
+  }
+  
+  .freccia {
+    font-size: 0.65rem;
+    margin-left: 6px;
+  }
+  
+ 
+  
+  /* ============================ RESPONSIVE (MOBILE) ============================ */
+  @media (max-width: 1024px) {
+    .navbar {
+      padding: 15px 20px;
+      position: fixed;
+      width: 100%;
+    }
+  
+    .hamburger {
+      display: block;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      color: #000;
+      cursor: pointer;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      position: fixed;
+      top: 80px;
+      left: 0;
+      width: 100vw;
+  
+      /* ✅ Limita altezza e abilita scroll */
+      max-height: 70vh;
+      overflow-y: auto;
+  
+      background-color: #295085;
+      padding: 30px 0;
+      z-index: 990;
+      transition: max-height 0.3s ease-in-out;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .nav-links li a {
+      color: white;
+      font-size: 1.5rem;
+      padding: 15px 0;
+    }
+  
+    /* ✅ Dropdown su mobile chiuso di default */
+    .dropdown-menu {
+      display: none;
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      background: none;
+      box-shadow: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+  
+    /* ✅ visibile solo con .open */
+    .dropdown.open .dropdown-menu {
+      display: block;
+    }
+  
+    .dropdown-menu li a {
+      color: lightgray;
+      font-size: 1.2rem;
+      padding: 5px 0;
+    }
+  }
+
+  
+  /* ============================ DROPDOWN (Mobile centrato) ============================ */
+@media (max-width: 1024px) {
+    .dropdown-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      margin: 5px 0;
+      text-align: center; /* centra il contenitore */
+    }
+  
+    .dropdown.open .dropdown-menu {
+      max-height: 500px;
+    }
+  
+    .dropdown-menu li a {
+      display: flex;                /* per centrare meglio */
+      justify-content: center;      /* centra orizzontalmente */
+      align-items: center;          /* centra verticalmente */
+      font-size: 1.2rem;
+      color: #e0e0e0;
+      padding: 12px 0;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  
+    .dropdown-menu li:last-child a {
+      border-bottom: none;
+    }
+  
+    .dropdown-menu li a:hover {
+      color: #ff6f3c;
+      background: rgba(255, 255, 255, 0.08);
+    }
+  }
+
+  
+  @media (max-width: 1024px) {
+    .dropdown {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .dropdown-menu {
+      position: relative;     /* ✅ non più absolute */
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+      background: none;       /* niente box separato */
+      margin: 0 auto;         /* centrato */
+      padding: 0;
+      width: 100%;            /* prende la stessa larghezza del menu */
+    }
+  
+    .dropdown.open .dropdown-menu {
+      max-height: 500px; /* slide down */
+    }
+  
+    .dropdown-menu li {
+      width: 100%;
+    }
+  
+    .dropdown-menu li a {
+      display: block;
+      width: 100%;             /* occupa tutta la riga */
+      text-align: center;      /* ✅ centrato come gli altri */
+      font-size: 1.2rem;
+      color: #e0e0e0;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+  
+    .dropdown-menu li:last-child a {
+      border-bottom: none;
+    }
+  
+    .dropdown-menu li a:hover {
+      color: #ff6f3c;
+      background: rgba(255, 255, 255, 0.08);
+    }
+  }
+  
+  
+   
+  
+  /* Evita sovrapposizione navbar/hero */
+.privacy-hero {
+    margin-top: 80px; /* spinge la hero sotto la navbar */
+  }
+  
+  /* Sistema hamburger */
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #000; /* visibile anche su fondo chiaro */
+    z-index: 2000; /* sopra tutto */
+  }
+  
+  /* Nascondi hamburger su desktop */
+  @media (min-width: 1025px) {
+    .hamburger {
+      display: none;
+    }
+  }
+  
+
+
+  /* Mantieni visibili le voci del menu mobile anche quando scrolli */
+@media (max-width: 1024px) {
+    .nav-links li a {
+      color: #fff !important;   /* sempre bianco su mobile */
+    }
+  
+    .dropdown-menu li a {
+      color: #ddd !important;   /* grigio chiaro per dropdown */
+    }
+  
+    .dropdown-menu li a:hover {
+      color: #ff6f3c !important; /* arancione in hover */
+    }
+  }
+  
+  
+   /* ============================================================ F O O T E R =============================================== */
+/* ================= FOOTER ================= */
+.footer {
+    background-color: #295085;
+    color: #fff;
+    text-align: center;
+    font-size: 0.80rem;
+    padding: 30px 10px;   /* ← aumenta lo spazio verticale */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+    line-height: 1.4;
+  }
+  
+  
+  .footer-bottom a {
+    color: #dce6f0;         /* colore chiaro come gli altri link */
+    text-decoration: none;
+    margin-left: 5px;
+  }
+  
+  .footer-bottom a:hover {
+    text-decoration: underline;
+  }
+
+    /* ================= CTA FORM (select) ================= */
+    .cta-form select {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+        border-radius: 6px;
+        border: none;
+        background-color: #fff;
+        color: #333;
+        line-height: 1.4;
+        box-sizing: border-box;
+        margin: 0;
+      }
+  
+  
+  
