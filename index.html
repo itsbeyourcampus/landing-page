@@ -400,28 +400,29 @@
   
  <!-- F O R M  C T A -->
 <form class="cta-form" id="cta">
-  <input type="text" name="nome" id="nome" placeholder="Il tuo nome completo" required />
-  <input type="email" name="email" id="email" placeholder="La tua email" required />
+  <input type="text" name="nome" id="cta-nome" placeholder="Il tuo nome completo" required />
+  <input type="email" name="email" id="cta-email" placeholder="La tua email" required />
 
-  <select name="corso" id="corso" required>
+  <select name="corso" id="cta-corso" required>
     <option value="">Seleziona il corso di tuo interesse</option>
     <option value="Digital Construction Manager">Corso Digital Construction Manager</option>
   </select>
 
-  <textarea name="messaggio" id="messaggio" placeholder="Scrivi un messaggio o chiedi informazioni..." rows="4"></textarea>
+  <textarea name="messaggio" id="cta-messaggio" placeholder="Scrivi un messaggio o chiedi informazioni..." rows="4"></textarea>
 
   <label class="checkbox">
-    <input type="checkbox" name="privacy" id="privacy" required>
+    <input type="checkbox" name="privacy" id="cta-privacy" required>
     Acconsento al trattamento dei dati personali
   </label>
 
   <label class="checkbox">
-    <input type="checkbox" name="newsletter">
+    <input type="checkbox" name="newsletter" id="cta-newsletter">
     Desidero ricevere aggiornamenti via email
   </label>
 
   <button type="submit" class="btn">Invia richiesta</button>
 </form>
+
 
   </div>
   
