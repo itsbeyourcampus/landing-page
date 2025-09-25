@@ -283,3 +283,15 @@ window.addEventListener("scroll", () => {
   }
 });
 
+
+// ===== Redirect form CTA =====
+const ctaForm = document.getElementById("cta");
+
+if (ctaForm) {
+  ctaForm.addEventListener("submit", () => {
+    setTimeout(() => {
+      window.location.href = "https://itsbeyourcampus.it/grazie/";
+    }, 1000); // 1 secondo per dare tempo a Formspree
+  });
+}
+
