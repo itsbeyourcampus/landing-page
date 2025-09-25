@@ -11,24 +11,69 @@
 
 
 
-// Script form con validazione email 
+// ===== FORM CTA con fetch + redirect =====
+const ctaForm = document.getElementById("ctaForm");
 
-  const form = document.querySelector(".cta-form");
-  const emailField = document.getElementById("email");
+if (ctaForm) {
+  const ctaNome = document.getElementById("cta-nome");
+  const ctaEmail = document.getElementById("cta-email");
+  const ctaCorso = document.getElementById("cta-corso");
+  const ctaPrivacy = document.getElementById("cta-privacy");
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
-  form.addEventListener("submit", function (e) {
-    // Controllo email
-    if (!emailRegex.test(emailField.value)) {
-      e.preventDefault(); // blocca solo se non valida
-      alert("Inserisci un indirizzo email valido.");
-      emailField.focus();
+  ctaForm.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    // Validazione nome
+    if (ctaNome.value.trim() === "") {
+      alert("Inserisci il tuo nome completo.");
+      ctaNome.focus();
       return;
     }
 
-    // altrimenti il form va avanti → Formspree invia i dati
+    // Validazione email
+    if (!emailRegex.test(ctaEmail.value)) {
+      alert("Inserisci un indirizzo email valido.");
+      ctaEmail.focus();
+      return;
+    }
+
+    // Validazione corso
+    if (ctaCorso.value.trim() === "") {
+      alert("Seleziona un corso.");
+      ctaCorso.focus();
+      return;
+    }
+
+    // Validazione privacy
+    if (!ctaPrivacy.checked) {
+      alert("Devi acconsentire al trattamento dei dati personali.");
+      return;
+    }
+
+    // Invio a Formspree
+    const data = new FormData(ctaForm);
+
+    try {
+      const response = await fetch("https://formspree.io/f/mqaykqkv", {
+        method: "POST",
+        body: data,
+        headers: { "Accept": "application/json" }
+      });
+
+      if (response.ok) {
+        // ✅ Redirect custom
+        window.location.href = "https://itsbeyourcampus.it/grazie/";
+      } else {
+        alert("Errore nell'invio del form, riprova.");
+      }
+    } catch (error) {
+      alert("Errore di connessione, riprova.");
+    }
   });
+}
+
 
 
 
