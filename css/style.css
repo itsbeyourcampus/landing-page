@@ -2111,11 +2111,6 @@ body {
     }
   }
 
- @media (max-width: 768px) {
-    .logo img {
-      display: none !important;
-    }
-  }
 
 
   /* Offset per compensare la navbar sticky */
