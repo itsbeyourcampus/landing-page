@@ -40,12 +40,40 @@
 
 <script>
   const form = document.getElementById("iscrizioneForm");
+  const emailField = document.getElementById("email");
+  const telField = document.getElementById("telefono");
+  const dateField = document.getElementById("data_nascita");
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  const telRegex = /^[0-9+\s]{10,15}$/;
 
   form.addEventListener("submit", async function(e) {
     e.preventDefault();
 
-    const data = new FormData(form);
+    // ✅ Validazione email
+    if (!emailRegex.test(emailField.value)) {
+      alert("Inserisci un indirizzo email valido.");
+      emailField.focus();
+      return;
+    }
 
+    // ✅ Validazione telefono
+    if (!telRegex.test(telField.value)) {
+      alert("Inserisci un numero di telefono valido (almeno 10 cifre).");
+      telField.focus();
+      return;
+    }
+
+    // ✅ Validazione data (non futura)
+    const today = new Date().toISOString().split("T")[0];
+    if (!dateField.value || dateField.value > today) {
+      alert("Inserisci una data di nascita valida.");
+      dateField.focus();
+      return;
+    }
+
+    // ✅ Invio a Formspree
+    const data = new FormData(form);
     try {
       const response = await fetch("https://formspree.io/f/xeorqakk", {
         method: "POST",
@@ -54,7 +82,7 @@
       });
 
       if (response.ok) {
-        // ✅ redirect alla pagina di ringraziamenti
+        // Redirect custom
         window.location.href = "https://itsbeyourcampus.it/grazie/";
       } else {
         alert("Errore nell'invio del form, riprova.");
@@ -65,66 +93,7 @@
   });
 </script>
 
-  <script>
-    const form = document.querySelector(".iscrizione-form");
-    const emailField = document.getElementById("email");
-    const telField = document.getElementById("telefono");
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-    const telRegex = /^[0-9+\s]{10,15}$/;
-    // numeri, + e spazi, minimo 10 caratteri, massimo 15
-
-    form.addEventListener("submit", function (e) {
-      // Verifica email
-      if (!emailRegex.test(emailField.value)) {
-        e.preventDefault();
-        alert("Inserisci un indirizzo email valido.");
-        emailField.focus();
-        return;
-      }
-
-      // Verifica telefono
-      if (!telRegex.test(telField.value)) {
-        e.preventDefault();
-        alert("Inserisci un numero di telefono valido (almeno 10 cifre).");
-        telField.focus();
-        return;
-      }
-    });
-  </script>
-
-<script>
-
-const dateField = document.getElementById("data_nascita");
-
-form.addEventListener("submit", function (e) {
-  // Verifica email
-  if (!emailRegex.test(emailField.value)) {
-    e.preventDefault();
-    alert("Inserisci un indirizzo email valido.");
-    emailField.focus();
-    return;
-  }
-
-  // Verifica telefono
-  if (!telRegex.test(telField.value)) {
-    e.preventDefault();
-    alert("Inserisci un numero di telefono valido (almeno 10 cifre).");
-    telField.focus();
-    return;
-  }
-
-  // Verifica data (non futura)
-  const today = new Date().toISOString().split("T")[0];
-  if (!dateField.value || dateField.value > today) {
-    e.preventDefault();
-    alert("Inserisci una data di nascita valida.");
-    dateField.focus();
-    return;
-  }
-});
-
-</script>
 </body>
 
 </html>
