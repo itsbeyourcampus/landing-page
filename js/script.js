@@ -11,44 +11,6 @@
 
 
 
-  // Script form CTA con validazione email + redirect personalizzato
-const form = document.querySelector(".cta-form");
-const emailField = document.getElementById("email");
-
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-
-form.addEventListener("submit", function (e) {
-  // Controllo email
-  if (!emailRegex.test(emailField.value)) {
-    e.preventDefault(); // blocca solo se non valida
-    alert("Inserisci un indirizzo email valido.");
-    emailField.focus();
-    return;
-  }
-
-  // ✅ Se valida → invia a Formspree (grazie all'action)
-  // e forza il redirect alla tua pagina "grazie"
-  e.preventDefault(); // blocca il redirect di Formspree
-  const data = new FormData(form);
-
-  fetch("https://formspree.io/f/mqaykqkv", {
-    method: "POST",
-    body: data,
-    headers: { "Accept": "application/json" }
-  }).then(() => {
-    window.location.href = "https://itsbeyourcampus.it/grazie/";
-  }).catch(() => {
-    alert("Errore nell'invio del form, riprova.");
-  });
-});
-
-    
-
-
-  
-
-
-
 
 //Particles.js 
 
@@ -255,14 +217,33 @@ window.addEventListener("scroll", () => {
 });
 
 
-// ===== Redirect form CTA =====
+
+// ===== FORM CTA con fetch + redirect =====
 const ctaForm = document.getElementById("cta");
 
 if (ctaForm) {
-  ctaForm.addEventListener("submit", () => {
-    setTimeout(() => {
-      window.location.href = "https://itsbeyourcampus.it/grazie/";
-    }, 1000); // 1 secondo per dare tempo a Formspree
+  ctaForm.addEventListener("submit", async function (e) {
+    e.preventDefault(); // blocca l'invio standard
+
+    const data = new FormData(ctaForm);
+
+    try {
+      const response = await fetch("https://formspree.io/f/mqaykqkv", {
+        method: "POST",
+        body: data,
+        headers: { "Accept": "application/json" }
+      });
+
+      if (response.ok) {
+        // ✅ Redirect alla tua pagina
+        window.location.href = "https://itsbeyourcampus.it/grazie/";
+      } else {
+        alert("Errore nell'invio del form, riprova.");
+      }
+    } catch (error) {
+      alert("Errore di connessione, riprova.");
+    }
   });
 }
+
 
