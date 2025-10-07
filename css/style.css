@@ -461,8 +461,10 @@
 @media (max-width: 768px) {
   .corso-wrapper {
     flex-direction: column;
-    gap: 0; /* niente spazio verticale */
+    align-items: center;    /* 🔹 centra tutto il contenuto */
+    text-align: center;     /* 🔹 centra il testo */
     padding: 0 25px;
+    gap: 10px;              /* 🔹 distanza minima tra blocchi */
   }
 
 
@@ -489,6 +491,10 @@
   .corso-punti li {
     font-size: 1rem;
     margin-bottom: 10px;
+  }
+     .btn-magic {
+    margin: 0 auto 5px auto;  /* 🔹 centra il bottone */
+    display: inline-block;
   }
 
   .corso-img {
