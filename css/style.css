@@ -460,11 +460,11 @@
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
   .corso-wrapper {
-    flex-direction: column;      /* testo sopra, immagine sotto */
-    gap: 30px;                   /* meno spazio verticale */
-    text-align: left;            /* 🔹 testo allineato a sinistra (più pulito) */
-    padding: 0 30px;             /* meno padding laterale */
+    flex-direction: column;
+    gap: 0; /* niente spazio verticale */
+    padding: 0 25px;
   }
+
 
   .corso-text {
     width: 100%;
@@ -492,15 +492,16 @@
   }
 
   .corso-img {
-    width: 100%;
-    max-width: 100%;
+    margin-top: -190px; /* 🔹 tira su l’immagine, regola qui finché combacia visivamente */
   }
 
   .corso-img img {
-    width: 100%;
-    max-width: 100%;
-    border-radius: 0;
-    object-fit: cover;
+    width: 80%;
+    max-width: 320px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 16px;
+    object-fit: contain;
   }
 }
 
