@@ -457,43 +457,66 @@
  
   
  
-  /* ===== Responsive ===== */
-  @media (max-width: 768px) {
-    .corso-wrapper {
-      flex-direction: column;   /* testo sopra, immagine sotto */
-      gap: 40px;                /* meno spazio */
-      text-align: center;
-    }
-  
-    .corso-text h2 {
-      font-size: 1.8rem;        /* titolo più piccolo */
-      margin-bottom: 15px;
-    }
-  
-    .corso-text p {
-      font-size: 1rem;          /* testo più compatto */
-      margin-bottom: 15px;
-    }
-  
-    .corso-punti li {
-      font-size: 0.95rem;       /* elenco più compatto */
-    }
-  
-    .corso-img img {
-      max-width: 60%;          /* immagine si adatta al mobile */
-    }
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .corso-wrapper {
+    flex-direction: column;      /* testo sopra, immagine sotto */
+    gap: 30px;                   /* meno spazio verticale */
+    text-align: left;            /* 🔹 testo allineato a sinistra (più pulito) */
+    padding: 0 30px;             /* meno padding laterale */
   }
-  
-  @media (max-width: 480px) {
-    .corso-text h2 {
-      font-size: 1.8rem;        /* titolo ancora più piccolo */
-    }
-  
-    .corso-text p {
-      font-size: 0.9rem;
-    }
+
+  .corso-text {
+    width: 100%;
   }
-  
+
+  .corso-text h2 {
+    font-size: 1.9rem;
+    margin-bottom: 15px;
+    color: #295085;
+  }
+
+  .corso-text p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+
+  .corso-punti {
+    margin-bottom: 25px;
+  }
+
+  .corso-punti li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .corso-img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .corso-img img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 480px) {
+  .corso-wrapper {
+    padding: 0 20px; /* meno margine laterale sui telefoni piccoli */
+  }
+
+  .corso-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .corso-text p {
+    font-size: 0.95rem;
+  }
+}
 
   /* ============================================================= C A M P U S ==================================================== */
 
