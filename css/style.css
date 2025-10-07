@@ -384,29 +384,31 @@
 
   /* ================================================================ C O R S O ==================================================== */
 
-.corso-unico {
-    background-color: #fff;
-    padding: 50px 20px;
+ .corso-unico{
+    background-color:#fff;
+    padding:50px 0;              /* ← tolgo i 20px laterali che ti spostavano tutto */
   }
   
-  .corso-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 150px;
-    max-width: 1200px;
-    margin: 0 auto;
+  
+  .corso-wrapper{
+    max-width:1400px;            /* ← come le altre sezioni (Chi siamo / Campus) */
+    margin:0 auto;
+    padding:0 120px;              /* ← stesso padding orizzontale delle altre sezioni */
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;                    /* gap più morbido (150px era eccessivo) */
   }
   
-  .corso-text {
-    max-width: 700px;
+  .corso-text{
+    flex:1 1 600px;
+    margin:0;                    /* nessun offset laterale extra */
   }
   
-  .corso-text h2 {
-    font-size: 2.2rem;
-    color: #295085;
-    margin-bottom: 20px;
+ .corso-text h2{
+    margin:0;                    /* assicura l’aderenza al bordo sinistro del container */
+    font-size:2.3rem;
+    color:#295085;
   }
   
   .corso-text p {
@@ -431,20 +433,20 @@
     margin-right: 10px;
   }
   
-  .corso-img {
-    max-width: 400px;
-    flex: 1;
+   .corso-img{
+    flex:0 0 480px;
+    max-width:480px;
   }
   
-  .corso-img img {
-    max-width: 500px;
-    width: 100%;
-    height: auto;
-    border-radius: 16px;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
+  .corso-img img{
+    width:100%;
+    height:auto;
+    border-radius:16px;
+    object-fit:cover;
+    display:block;
+    margin:0;
   }
+ 
   
  
   /* ===== Responsive ===== */
