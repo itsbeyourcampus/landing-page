@@ -2194,7 +2194,7 @@ body {
 }
 
 
-/* ======= FASCIA FOTO ESTESA ======= */
+/* ================================================================= FASCIA FOTO ESTESA ========================================== */
 .fascia-foto {
   width: 100%;
   overflow: hidden;
@@ -2208,6 +2208,20 @@ body {
   object-fit: cover;
 }
 
+@media (max-width: 768px) {
+  .fascia-foto img {
+    height: auto;           /* 🔹 lascia l’altezza naturale */
+    max-height: none;       /* evita limiti di altezza */
+    object-fit: contain;    /* 🔹 mostra tutta l’immagine */
+    object-position: center;
+    margin: 0 auto;
+    transform: scale(1.1);
+  }
+
+  .fascia-foto {
+    margin: 40px 0;         /* meno spazio sopra/sotto */
+  }
+}
 
 /* ======= FASCIA OBBLIGATORIA (loghi istituzionali) ======= */
 .fascia-obbligatoria {
