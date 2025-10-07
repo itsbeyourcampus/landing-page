@@ -365,7 +365,7 @@
   /* Tablet */
 @media (max-width: 768px) {
     .colonna.titolo h2 {
-      font-size: 1.8rem;   /* titolo più piccolo */
+      font-size: 3rem;   /* titolo più piccolo */
     }
   
     .colonna.testo p {
@@ -377,7 +377,7 @@
   /* Mobile piccolo */
   @media (max-width: 480px) {
     .colonna.titolo h2 {
-      font-size: 1.5rem;   /* titolo ancora più ridotto */
+      font-size: 3rem;   /* titolo ancora più ridotto */
     }
   
     .colonna.testo p {
@@ -415,7 +415,7 @@
   
  .corso-text h2{
     margin:0;                    /* assicura l’aderenza al bordo sinistro del container */
-    font-size:2.3rem;
+    font-size: 3rem;
     color:#295085;
   }
   
@@ -473,7 +473,7 @@
   }
 
   .corso-text h2 {
-    font-size: 1.9rem;
+    font-size: 3rem;
     margin-bottom: 15px;
     color: #295085;
   }
@@ -517,7 +517,7 @@
   }
 
   .corso-text h2 {
-    font-size: 1.6rem;
+    font-size: 3rem;
   }
 
   .corso-text p {
