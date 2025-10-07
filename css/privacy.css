@@ -198,10 +198,29 @@ body {
     width: 100%;
   }
   
-  .logo img {
-    height: 60px;
-    vertical-align: middle;
-  }
+ /* ======= DUE LOGHI SEPARATI ======= */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 25px; /* spazio tra i loghi */
+}
+
+/* Primo logo: BYC */
+.logo-byc img {
+  height: 60px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Secondo logo: ITSCantieri */
+.logo-cantieri img {
+  height: 75px; /* aumentato per compensare proporzioni più piccole */
+  width: auto;
+  display: block;
+  object-fit: contain;
+  transform: translateY(-3px); /* micro-allineamento verticale */
+}
   
   .nav-links {
     list-style: none;
