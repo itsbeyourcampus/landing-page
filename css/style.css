@@ -365,7 +365,9 @@
   /* Tablet */
 @media (max-width: 768px) {
     .colonna.titolo h2 {
-      font-size: 2rem;   /* titolo più piccolo */
+    font-size: 2rem;   /* titolo più piccolo */
+    align-items: center;    /* 🔹 centra tutto il contenuto */
+    text-align: center;
     }
   
     .colonna.testo p {
