@@ -1,0 +1,4 @@
+/* Nasconde l'intero popup (overlay + box) */
+#popup-openday {
+    display: none;
+}
