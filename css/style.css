@@ -1946,7 +1946,7 @@ body {
     text-decoration: none;
     color: #000;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 15px;
     padding: 5px 0;
     transition: color 0.3s ease;
   }
@@ -1960,7 +1960,7 @@ body {
     text-decoration: none;
     color: #000; /* nero */
     font-weight: 700;
-    font-size: 20px;
+    font-size: 15px;
     padding: 5px 0;
     transition: color 0.3s ease;
   }
@@ -2013,7 +2013,7 @@ body {
   
   .dropdown-menu li a {
     color: #333;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 500;
     padding: 10px 20px;
     display: block;
