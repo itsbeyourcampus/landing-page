@@ -2255,25 +2255,20 @@ body {
   margin-bottom: 60px;
 }
 
-.concorso-badge {
-  display: inline-block;
-  background-color: #295085;
-  color: #fff;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  padding: 6px 18px;
-  border-radius: 30px;
-  margin-bottom: 20px;
-}
-
 .concorso-header h2 {
   font-size: clamp(2rem, 5vw, 3rem);
   color: #295085;
   font-weight: 800;
   line-height: 1.2;
-  margin-bottom: 25px;
+  margin-bottom: 14px;
+}
+
+.concorso-organizzatori {
+  font-size: 1rem;
+  color: #295085;
+  font-weight: 600;
+  margin-bottom: 22px;
+  letter-spacing: 0.3px;
 }
 
 .concorso-header .highlight-orange {
@@ -2382,12 +2377,10 @@ body {
   line-height: 1.4;
 }
 
-/* ----- Info: cosa si chiede + materiali ----- */
+/* ----- Info: cosa si chiede ----- */
 .concorso-info {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  margin-bottom: 70px;
+  max-width: 720px;
+  margin: 0 auto 70px;
 }
 
 .info-block {
@@ -2627,6 +2620,19 @@ body {
   background: linear-gradient(135deg, #295085 0%, #1f3a5c 100%);
   color: #fff;
   border-color: transparent;
+}
+
+.download-card.primary.zip {
+  background: linear-gradient(135deg, #f97316 0%, #d65a0a 100%);
+}
+
+.download-card.primary.zip .file-icon,
+.download-card.primary.zip .dl-icon {
+  color: #fff;
+}
+
+.download-card.primary.zip .download-text span {
+  color: #FFE4CC;
 }
 
 .download-card.primary:hover {
