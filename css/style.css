@@ -2222,6 +2222,7 @@ body {
 
   /* Offset per compensare la navbar sticky */
 #openday,
+#concorso,
 #chi-siamo,
 #corsi,
 #scuola,
@@ -2231,6 +2232,562 @@ body {
 #sbocchi,
 #cta {
   scroll-margin-top: 100px; /* regola l'altezza in base alla navbar */
+}
+
+
+/* =================================================== C O N C O R S O   D I   I D E E ============================================ */
+.concorso-idee {
+  background: linear-gradient(180deg, #FFF7EA 0%, #ffffff 100%);
+  padding: 90px 20px;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.concorso-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ----- Header ----- */
+.concorso-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.concorso-badge {
+  display: inline-block;
+  background-color: #295085;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+
+.concorso-header h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: #295085;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.concorso-header .highlight-orange {
+  color: #f97316;
+}
+
+.concorso-sottotitolo {
+  font-size: 1.15rem;
+  max-width: 850px;
+  margin: 0 auto 18px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.concorso-target {
+  font-size: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #444;
+  background: #fff;
+  padding: 14px 22px;
+  border-radius: 10px;
+  border-left: 4px solid #f97316;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.concorso-target i {
+  color: #f97316;
+  margin-right: 8px;
+}
+
+/* ----- Premi ----- */
+.concorso-premi {
+  margin-bottom: 70px;
+  text-align: center;
+}
+
+.concorso-premi h3,
+.concorso-info h3,
+.concorso-gallery h3,
+.concorso-timeline h3 {
+  font-size: 1.6rem;
+  color: #295085;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.premi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.premio-card {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.premio-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.12);
+}
+
+.premio-card .premio-pos {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: #fff;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.premio-card.oro .premio-pos    { background: #d4a017; }
+.premio-card.argento .premio-pos{ background: #9aa0a6; }
+.premio-card.bronzo .premio-pos { background: #b06a2c; }
+
+.premio-card i {
+  font-size: 2.2rem;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+.premio-card.oro i     { color: #d4a017; }
+.premio-card.argento i { color: #9aa0a6; }
+.premio-card.bronzo i  { color: #b06a2c; }
+
+.premio-card p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* ----- Info: cosa si chiede + materiali ----- */
+.concorso-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 70px;
+}
+
+.info-block {
+  background: #fff;
+  padding: 30px 28px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.info-block h3 {
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.concorso-lista,
+.materiali-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.concorso-lista li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 0;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+  border-bottom: 1px dashed #eee;
+}
+
+.concorso-lista li:last-child { border-bottom: none; }
+
+.concorso-lista i {
+  color: #f97316;
+  font-size: 1.1rem;
+  margin-top: 4px;
+  flex-shrink: 0;
+  width: 22px;
+  text-align: center;
+}
+
+.materiali-lista li {
+  padding: 10px 0;
+  font-size: 1rem;
+  color: #333;
+  border-bottom: 1px dashed #eee;
+  position: relative;
+  padding-left: 22px;
+}
+
+.materiali-lista li:last-child { border-bottom: none; }
+
+.materiali-lista li::before {
+  content: "■";
+  color: #295085;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  font-size: 0.75rem;
+}
+
+.materiali-lista strong {
+  color: #295085;
+}
+
+/* ----- Gallery ----- */
+.concorso-gallery {
+  margin-bottom: 70px;
+}
+
+.gallery-intro {
+  text-align: center;
+  color: #555;
+  margin-bottom: 25px;
+  font-size: 1rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+}
+
+.gallery-grid figure {
+  margin: 0;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 1 / 1;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.gallery-grid figure:hover img {
+  transform: scale(1.07);
+}
+
+.gallery-grid figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 18px 10px 10px;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+/* ----- Timeline ----- */
+.concorso-timeline {
+  margin-bottom: 60px;
+}
+
+.timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+  position: relative;
+}
+
+.timeline-step {
+  background: #fff;
+  border-top: 4px solid #295085;
+  border-radius: 10px;
+  padding: 20px 14px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.timeline-step:hover {
+  transform: translateY(-4px);
+}
+
+.timeline-step.evidenza {
+  border-top-color: #f97316;
+  background: #FFF6E9;
+}
+
+.timeline-step .step-date {
+  font-weight: 800;
+  color: #295085;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.timeline-step.evidenza .step-date {
+  color: #f97316;
+}
+
+.timeline-step p {
+  font-size: 0.85rem;
+  color: #333;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* ----- Downloads ----- */
+.concorso-downloads {
+  margin-bottom: 60px;
+}
+
+.concorso-downloads h3 {
+  font-size: 1.6rem;
+  color: #295085;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.downloads-intro {
+  text-align: center;
+  color: #555;
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
+
+.downloads-section {
+  margin-bottom: 30px;
+}
+
+.downloads-section h4 {
+  font-size: 1.05rem;
+  color: #295085;
+  font-weight: 700;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #f97316;
+  display: inline-block;
+}
+
+.downloads-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.downloads-grid.materiali-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.download-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #fff;
+  padding: 16px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #333;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.download-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-color: #f97316;
+}
+
+.download-card.primary {
+  background: linear-gradient(135deg, #295085 0%, #1f3a5c 100%);
+  color: #fff;
+  border-color: transparent;
+}
+
+.download-card.primary:hover {
+  border-color: #f97316;
+}
+
+.download-card .file-icon {
+  font-size: 1.8rem;
+  color: #f97316;
+  flex-shrink: 0;
+}
+
+.download-card.primary .file-icon {
+  color: #FFB066;
+}
+
+.download-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+  min-width: 0;
+}
+
+.download-text strong {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.download-text span {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.download-card.primary .download-text span {
+  color: #BBD0EA;
+}
+
+.download-card .dl-icon {
+  font-size: 0.95rem;
+  color: #999;
+  flex-shrink: 0;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.download-card:hover .dl-icon {
+  color: #f97316;
+  transform: translateY(2px);
+}
+
+.download-card.primary .dl-icon {
+  color: #fff;
+}
+
+/* Card piccola per le schede materiali */
+.download-card.small {
+  flex-direction: column;
+  text-align: center;
+  padding: 20px 12px;
+  gap: 8px;
+}
+
+.download-card.small .file-icon {
+  font-size: 1.7rem;
+}
+
+.download-card.small strong {
+  font-size: 0.9rem;
+  color: #295085;
+}
+
+.download-card.small .dl-icon {
+  font-size: 0.85rem;
+}
+
+/* ----- CTA finale ----- */
+.concorso-cta {
+  text-align: center;
+  background: #fff;
+  padding: 35px 20px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.concorso-cta p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 18px;
+}
+
+.concorso-cta .btn-magic i {
+  margin-right: 8px;
+}
+
+/* ============== RESPONSIVE ============== */
+@media (max-width: 900px) {
+  .concorso-info {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery-grid figure:nth-child(4),
+  .gallery-grid figure:nth-child(5) {
+    grid-column: span 1;
+  }
+
+  .downloads-grid.materiali-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .concorso-idee {
+    padding: 60px 16px;
+  }
+
+  .premi-grid {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+  }
+
+  .timeline-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .concorso-header h2 {
+    font-size: 2rem;
+  }
+
+  .concorso-sottotitolo {
+    font-size: 1rem;
+  }
+
+  .info-block {
+    padding: 22px 18px;
+  }
+
+  .downloads-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .downloads-grid.materiali-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 400px) {
+  .timeline-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 
