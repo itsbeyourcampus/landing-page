@@ -2469,17 +2469,19 @@ body {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 14px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 950px;
+  margin: 0 auto;
 }
 
 .gallery-grid figure {
   margin: 0;
   position: relative;
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-  aspect-ratio: 1 / 1;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  aspect-ratio: 4 / 3;
 }
 
 .gallery-grid img {
@@ -2730,15 +2732,6 @@ body {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .gallery-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .gallery-grid figure:nth-child(4),
-  .gallery-grid figure:nth-child(5) {
-    grid-column: span 1;
-  }
-
   .downloads-grid.materiali-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -2759,7 +2752,8 @@ body {
   }
 
   .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    max-width: 400px;
   }
 
   .concorso-header h2 {
