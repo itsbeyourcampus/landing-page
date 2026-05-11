@@ -2,22 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://itsbeyourcampus.it/</loc>
+    <loc>https://beyourcampus.it/</loc>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://itsbeyourcampus.it/iscrizione/</loc>
+    <loc>https://beyourcampus.it/iscrizione/</loc>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://itsbeyourcampus.it/privacy/</loc>
+    <loc>https://beyourcampus.it/privacy/</loc>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://itsbeyourcampus.it/grazie/</loc>
+    <loc>https://beyourcampus.it/grazie/</loc>
     <priority>0.5</priority>
   </url>
 

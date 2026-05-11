@@ -236,7 +236,7 @@ if (ctaForm) {
 
       if (response.ok) {
         // ✅ Redirect alla tua pagina
-        window.location.href = "https://itsbeyourcampus.it/grazie/";
+        window.location.href = "https://beyourcampus.it/grazie/";
       } else {
         alert("Errore nell'invio del form, riprova.");
       }

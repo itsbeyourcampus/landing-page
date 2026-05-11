@@ -414,11 +414,27 @@
     flex:1 1 600px;
     margin:0;                    /* nessun offset laterale extra */
   }
-  
+
+  .corso-header{
+    display:flex;
+    align-items:center;
+    gap:24px;
+    margin-bottom:18px;
+    flex-wrap:wrap;
+  }
+
+  .corso-logo-fondazione{
+    height:70px;
+    width:auto;
+    flex-shrink:0;
+    object-fit:contain;
+  }
+
  .corso-text h2{
     margin:0;                    /* assicura l’aderenza al bordo sinistro del container */
     font-size: 2rem;
     color:#295085;
+    flex:1 1 auto;
   }
   
   .corso-text p {
@@ -472,6 +488,16 @@
 
   .corso-text {
     width: 100%;
+  }
+
+  .corso-header{
+    justify-content:center;
+    gap:18px;
+    margin-bottom:14px;
+  }
+
+  .corso-logo-fondazione{
+    height:55px;
   }
 
   .corso-text h2 {
